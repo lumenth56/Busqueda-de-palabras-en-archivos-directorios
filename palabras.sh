@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z $# ] || [ ! -d $# ]; then
+if [ -z $1 ] || [ ! -d $1 ]; then
 	echo "No pusiste ningun argumento o no existe la carpeta"
 	exit 1
 fi
