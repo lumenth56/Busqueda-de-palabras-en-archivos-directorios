@@ -1,7 +1,7 @@
 #!/bin/bash
-if [ -z $2 ]|| [ ! -d $2 ];then
-        echo "No existe la carpeta o no hay argumento"
-        exit 1
+if [ ! -d $2 ];then
+    echo "No existe la carpeta o no hay argumento"
+    exit 1
 fi
 palabra=$1
 carpetas=${2:-/}
