@@ -1,4 +1,7 @@
 #!/bin/bash
+if [ $# -eq 0 ] || [ $# -gt 2 ]; then
+    echo "ERROR, colocaste menos de un argumento o más de dos"
+fi
 if [ ! -d $2 ];then
     echo "No existe la carpeta o no hay argumento"
     exit 1
