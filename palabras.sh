@@ -4,8 +4,8 @@ if [ -z $# ] || [ ! -d $# ]; then
 	exit 1
 fi
 
-
-carpeta=${1:-/}
+palabra=$1
+carpeta=${2:-/}
 resultado=$(grep -rl -D skip "$palabra" "$carpeta" 2>/dev/null)
 
 if [ -z "$resultado" ]; then
