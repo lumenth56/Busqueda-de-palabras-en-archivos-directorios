@@ -12,7 +12,7 @@ if [ -z "$resultados" ]; then
     echo "No se hallo la palabra $palabra"
     exit 0
 fi
-echo "Archivos con "home":
+echo "Archivos con home":
 echo "$resultados" | while read -r archivo; do
     realpath "$archivo"
 done
