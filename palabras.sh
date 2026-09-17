@@ -8,3 +8,12 @@ fi
 carpetas=${1:-/}
 resultados=$(grep -rl -D skip "home" "$carpetas" 2>/dev/null)
 
+<<<<<<< HEAD
+if [ -z "$resultados" ]; then
+    echo "No se hallo la palabra $palabra"
+    exit 0
+fi
+echo "Archivos con "home":
+echo "$resultados" | while read -r archivo; do
+    realpath "$archivo"
+done
