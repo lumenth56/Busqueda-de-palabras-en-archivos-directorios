@@ -5,15 +5,14 @@ if [ -z $# ] || [ ! -d $# ]; then
 fi
 
 
-carpetas=${1:-/}
-resultados=$(grep -rl -D skip "home" "$carpetas" 2>/dev/null)
+carpeta=${1:-/}
+resultado=$(grep -rl -D skip "$palabra" "$carpeta" 2>/dev/null)
 
-<<<<<<< HEAD
-if [ -z "$resultados" ]; then
+if [ -z "$resultado" ]; then
     echo "No se hallo la palabra $palabra"
     exit 0
 fi
-echo "Archivos con "home":
-echo "$resultados" | while read -r archivo; do
+echo "Archivos con "$palabra":
+echo "$resultado" | while read -r archivo; do
     realpath "$archivo"
 done
